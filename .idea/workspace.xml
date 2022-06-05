@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d2cac2-8da8-483a-a6d1-376c7f6c1fa8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Srever.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Srever.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,6 +55,12 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.Client">
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Srever" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,7 +71,7 @@
       <updated>1653243680998</updated>
       <workItem from="1653243682437" duration="1027000" />
       <workItem from="1653272587909" duration="729000" />
-      <workItem from="1653273996558" duration="2999000" />
+      <workItem from="1653273996558" duration="4990000" />
     </task>
     <servers />
   </component>

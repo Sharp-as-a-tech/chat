@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Srever" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="Server" />
+  <configuration default="false" name="Client" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Client" />
     <module name="ch" />
     <method v="2">
       <option name="Make" enabled="true" />
