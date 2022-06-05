@@ -26,6 +26,35 @@ public class Server {
             e.printStackTrace();
         }
     }
+    public void startReading(){
+        //tread read
+        Runnable r1=()->
+        {
+            System.out.println("reader started..");
+            while(true)
+            {
+                try{
+                    String msg=br.readLine();
+                    if(msg.equals("exit"))
+                    {
+                        System.out.println("Client terminated the chat");
+                        //socket.close();
+                        break;
+                    }
+                    System.out.println("Client: "+msg);
+
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+        };
+        new Thread(r1).start();
+
+
+    }
 
     public static void main(String[] args){
         System.out.println("this is Server...");
