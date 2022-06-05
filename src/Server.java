@@ -55,6 +55,32 @@ public class Server {
 
 
     }
+    public void startWriting(){
+        //tread write
+        Runnable r2=()->{
+            System.out.println("writer started");
+            while(true)
+            {
+                try
+                {
+                    BufferedReader br1=new BufferedReader(new InputStreamReader(System.in));
+                    String content=br1.readLine();
+                    out.println(content);
+                    out.flush();
+
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+
+            }
+
+        };
+        new Thread(r2).start();
+
+    }
+
 
     public static void main(String[] args){
         System.out.println("this is Server...");
