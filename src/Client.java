@@ -23,6 +23,7 @@ public class Client {
 
         }
     }
+    //startreading methodgit status
     public void startReading(){
         //tread read
         Runnable r1=()->
