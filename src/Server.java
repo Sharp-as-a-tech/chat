@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.*;
+import java.io.*;
+
 public class Server {
     ServerSocket server;
     Socket socket;
