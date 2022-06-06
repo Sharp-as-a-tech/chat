@@ -23,7 +23,7 @@ public class Server {
             startWriting();
         }
         catch (Exception e){
-            e.printStackTrace();
+
         }
     }
     public void startReading(){
