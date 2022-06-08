@@ -20,7 +20,7 @@ public class Client extends JFrame {
     public Client() {
         try {
             System.out.println("Sending request to Server");
-            socket = new Socket("127.0.0.1", 7778);
+            socket = new Socket("127.0.0.1", 7777);
             System.out.println("Connection done");
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
@@ -100,27 +100,26 @@ public class Client extends JFrame {
         Runnable r1=()->
         {
             System.out.println("reader started..");
-            while(true)
-            {
-                try{
-                    String msg=br.readLine();
-                    if(msg.equals("exit"))
-                    {
+            try {
+                while (true) {
+
+                    String msg = br.readLine();
+                    if (msg.equals("exit")) {
                         System.out.println("Server terminated the chat");
+                        JOptionPane.showMessageDialog(this,"server terminated the chat");
+                        messageInput.setEnabled(false);
                         break;
                     }
-                    System.out.println("Server: "+msg);
+                    //System.out.println("Server: " + msg);
+                    messageArea.append("Server: " + msg+ "\n");
 
                 }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Connection closed");
             }
-
         };
         new Thread(r1).start();
-
 
     }
     public void startWriting(){
