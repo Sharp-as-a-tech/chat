@@ -1,4 +1,7 @@
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -7,17 +10,22 @@ public class Client {
     Socket socket;
     BufferedReader br;
     PrintWriter out;
+    //declare components
+    private final JLabel heading=new JLabel("Client Area");
+    private final JTextArea messageArea=new JTextArea();
+    private final JTextField messageInput=new JTextField();
+    private final Font font=new Font("Roboto",Font.PLAIN,20);
 
     //class constructor
     public Client() {
         try {
             System.out.println("Sending request to Server");
-            socket = new Socket("127.0.0.1", 7777);
+            socket = new Socket("127.0.0.1", 7778);
             System.out.println("Connection done");
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
             startReading();
-            startWriting();
+            //startWriting();
 
         } catch (Exception e) {
 
