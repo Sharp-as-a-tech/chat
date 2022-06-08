@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-public class Client {
+public class Client extends JFrame {
     Socket socket;
     BufferedReader br;
     PrintWriter out;
@@ -35,6 +35,34 @@ public class Client {
     }
 
     private void handleEvants() {
+        messageInput.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                //  System.out.println("Key released "+e.getKeyCode());
+                if (e.getKeyCode()==10)
+                {
+                    //System.out.println("enter pressed");
+                    String contentToSend=messageInput.getText();
+                    messageArea.append(  "Me :" +contentToSend+"\n");
+                    out.println(contentToSend);
+                    out.flush();
+                    messageInput.setText("");
+                    messageInput.requestFocus();
+                }
+
+            }
+        });
+
     }
 
     private void CreateGUI() {
@@ -56,6 +84,13 @@ public class Client {
         heading.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
         // messageInput.setEditable(false);
         messageInput.setHorizontalAlignment(SwingConstants.CENTER);
+        //set layout frame
+        this.setLayout(new BorderLayout());
+        // adding components to frame
+        this.add(heading,BorderLayout.NORTH);
+        //JScrollPane jScrollPane=new JScrollPane(messageArea);
+        this.add(messageArea,BorderLayout.CENTER);
+        this.add(messageInput,BorderLayout.SOUTH);
 
     }
 
