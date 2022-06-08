@@ -44,6 +44,14 @@ public class Client {
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
+        //coding for component
+        heading.setFont(font);
+        messageArea.setFont(font);
+        messageInput.setFont(font);
+        heading.setIcon(new ImageIcon("logo.jpeg"));
+        heading.setHorizontalTextPosition(SwingConstants.CENTER);
+        heading.setVerticalTextPosition(SwingConstants.BOTTOM);
+        heading.setVerticalTextPosition(SwingConstants.CENTER);
     }
 
     //startreading methodgit status
