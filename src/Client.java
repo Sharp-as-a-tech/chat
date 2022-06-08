@@ -25,12 +25,27 @@ public class Client {
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
             startReading();
+            CreateGUI();
+            handleEvants();
             //startWriting();
 
         } catch (Exception e) {
 
         }
     }
+
+    private void handleEvants() {
+    }
+
+    private void CreateGUI() {
+        //gui
+        this.setTitle("Client Messager[END]");
+        this.setSize(600,600);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
+    }
+
     //startreading methodgit status
     public void startReading(){
         //tread read
