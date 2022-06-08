@@ -52,6 +52,11 @@ public class Client {
         heading.setHorizontalTextPosition(SwingConstants.CENTER);
         heading.setVerticalTextPosition(SwingConstants.BOTTOM);
         heading.setVerticalTextPosition(SwingConstants.CENTER);
+        heading.setHorizontalAlignment(SwingConstants.CENTER);
+        heading.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        // messageInput.setEditable(false);
+        messageInput.setHorizontalAlignment(SwingConstants.CENTER);
+
     }
 
     //startreading methodgit status
