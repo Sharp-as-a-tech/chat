@@ -76,19 +76,20 @@ public class Client extends JFrame {
         heading.setFont(font);
         messageArea.setFont(font);
         messageInput.setFont(font);
-        heading.setIcon(new ImageIcon("logo.jpeg"));
+        heading.setIcon(new ImageIcon("c.jpeg"));
         heading.setHorizontalTextPosition(SwingConstants.CENTER);
         heading.setVerticalTextPosition(SwingConstants.BOTTOM);
         heading.setVerticalTextPosition(SwingConstants.CENTER);
         heading.setHorizontalAlignment(SwingConstants.CENTER);
         heading.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-        // messageInput.setEditable(false);
+       //  messageInput.setEditable(false);
+         //messageArea.setEditable(false);
         messageInput.setHorizontalAlignment(SwingConstants.CENTER);
         //set layout frame
         this.setLayout(new BorderLayout());
         // adding components to frame
         this.add(heading,BorderLayout.NORTH);
-        //JScrollPane jScrollPane=new JScrollPane(messageArea);
+       //JScrollPane jScrollPane=new JScrollPane(messageArea);
         this.add(messageArea,BorderLayout.CENTER);
         this.add(messageInput,BorderLayout.SOUTH);
 

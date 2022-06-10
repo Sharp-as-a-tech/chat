@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Srever" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="15" />
     <option name="MAIN_CLASS_NAME" value="Server" />
     <module name="ch" />
     <method v="2">
